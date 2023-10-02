@@ -139,3 +139,28 @@ weather_df %>%
   geom_density_ridges()
 ```
 
+save and embed plots
+
+```{r}
+weather_plot=
+  weather_df %>% 
+  ggplot(aes(x=tmin,y=tmax))+geom_point()
+ggsave("./results/weatherplot.pdf",weather_plot)
+```
+what about embedding
+```{r}
+weather_plot
+```
+
+
+
+
+```{r, fig.width=12, fig.width=6}
+weather_plot
+```
+
+
+
+
+
+
